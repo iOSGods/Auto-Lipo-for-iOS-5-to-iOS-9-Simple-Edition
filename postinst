@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Made by DiDA for iOSGods.com! - v1.0 - https://github.com/iOSGods/Auto-Lipo-for-iOS-5-to-iOS-9-Simple-Edition/
+# Made by DiDA for iOSGods.com! - v1.1 - https://github.com/iOSGods/Auto-Lipo-for-iOS-5-to-iOS-9-Simple-Edition/
 
 set -e
 
@@ -10,18 +10,18 @@ case "${1}" in
         case "$(sw_vers -productVersion)" in
             5*|6*|7*|8*)
                 # If iOS 5, 6, 7 or 8 detected. Execute LipoARM64.
-                printf "iOS 8 or lower has been detected.\n"
+                printf "iOS 8 or lower has been detected.\\n"
                 /usr/bin/LIPONAME BINARYNAME
                 ;;
             9*|10*)
                 printf "iOS 9+ has been detected.\\n"
-                binary_file=/Library/PreferenceBundles/PROJECTNAME.bundle/THINNEDBINARYNAME
+                binary_file=/var/mobile/Documents/Binary/CRACKEDANDTHINNEDBINARYNAME
                 if [ ! -f "${binary_file}" ]; then
-                    printf "${binary_file} file wasn't found, please ask for help on iOSGods"
+                    printf "${binary_file} file wasn't found, please ask for help on iOSGods.com\\n"
                     exit 1
                 fi
-                mv "${binary_file}" /var/mobile/Containers/Bundle/Application/*/APPFOLDER/
-                chmod +x /var/mobile/Containers/Bundle/Application/*/FOLDER/THINNEDBINARYNAME
+                mv "${binary_file}" /var/mobile/Containers/Bundle/Application/*/APPNAME.app/
+                chmod +x /var/mobile/Containers/Bundle/Application/*/APPNAME.app/CRACKEDANDTHINNEDBINARYNAME
                 ;;
         esac
         ;;
